@@ -121,8 +121,6 @@ class FindResultsActivity : AppCompatActivity() {
     }
 
     private fun JSONToFilmsArr(jsonStr: String, context: AppCompatActivity): ArrayList<Film>? {
-        Log.e("cum", jsonStr.length.toString())
-        Log.e("cum", jsonStr)
         var docs = (JSONTokener(jsonStr).nextValue() as JSONObject).getString("docs")
         val jsonArray = JSONTokener(docs).nextValue() as JSONArray
 
